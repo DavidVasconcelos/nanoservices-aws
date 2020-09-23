@@ -1,5 +1,5 @@
 const AWS = require('aws-sdk');
-const uuid = require('uuid/v4');
+const { v4: uuidv4 } = require('uuid');
 
 AWS.config.update({
     region: 'sa-east-1'
@@ -7,11 +7,11 @@ AWS.config.update({
 
 const S3 = new AWS.S3();
 
-const BUCKET = 'nanoservices-imagens';
+const BUCKET = 'nanoservices-imagens-udemy';
 
 const upload = body => {
     
-    const id = uuid();
+    const id = uuidv4();
     const KEY = id + '.jpg';
 
 
@@ -30,8 +30,8 @@ const upload = body => {
                 bucket: BUCKET,
                 key: KEY
             });
-        })
-    })
+        });
+    });
 
 }
 
