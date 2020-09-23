@@ -11,5 +11,8 @@
   "devDependencies": {
     "aws-sdk": "^2.758.0",
     "serverless-apigw-binary": "^0.4.4"
+  },
+  "dependencies": {
+    "uuid": "^8.3.0"
   }
 }
