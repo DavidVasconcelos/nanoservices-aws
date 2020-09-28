@@ -1,0 +1,14 @@
+service: thumbnail-handler
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: sa-east-1
+
+functions:
+  thumbnail:
+    handler: handler.thumbnail
+    role: arn:aws:iam::316649820111:role/lambda-sqs-s3
+    events:
+      - sns: arn:aws:sns:sa-east-1:316649820111:s3-nanoservices-imagens-put-topic
+
