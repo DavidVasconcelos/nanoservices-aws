@@ -6,7 +6,7 @@ provider:
   region: sa-east-1
 
 functions:
-  hello:
+  tag:
     handler: handler.tag
     role: arn:aws:iam::316649820111:role/lambda-sqs-rekognition
     events:

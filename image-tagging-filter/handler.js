@@ -14,7 +14,7 @@ module.exports.tag = async event => {
   const bucket = s3Info.Records[0].s3.bucket.name;
   const key = s3Info.Records[0].s3.object.key
 
-  const data = await (new Promisse((res, rej) => {
+  const data = await (new Promise((res, rej) => {
 
     rekognition.detectLabels({
       Image : {
