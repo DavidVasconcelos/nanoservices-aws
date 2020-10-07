@@ -1,0 +1,13 @@
+service: image-tagging-filter
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: sa-east-1
+
+functions:
+  hello:
+    handler: handler.tag
+    role: arn:aws:iam::316649820111:role/lambda-sqs-rekognition
+    events:
+      - sns: arn:aws:sns:sa-east-1:316649820111:s3-nanoservices-imagens-put-topic
