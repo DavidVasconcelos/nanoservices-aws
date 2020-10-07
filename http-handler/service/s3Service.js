@@ -2,12 +2,12 @@ const AWS = require('aws-sdk');
 const { v4: uuidv4 } = require('uuid');
 
 AWS.config.update({
-    region: 'sa-east-1'
+    region: 'us-east-1'
 });
 
 const S3 = new AWS.S3();
 
-const BUCKET = 'nanoservices-imagens-udemy';
+const BUCKET = 'nanoservices-images';
 
 const upload = body => {
     

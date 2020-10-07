@@ -1,12 +1,12 @@
 const AWS = require('aws-sdk');
 
 AWS.config.update({
-    region: 'sa-east-1'
+    region: 'us-east-1'
 });
 
 const S3 = new AWS.S3();
 
-const BUCKET = 'nanoservices-imagens-black-white';
+const BUCKET = 'nanoservices-aws-images-black-white';
 
 const getObject = (bucket, key) => {
     return new Promise((res, rej) => {
