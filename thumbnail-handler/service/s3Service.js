@@ -24,16 +24,22 @@ const getObject = (bucket, key) => {
 }
 
 const putObject = (buffer, fileName) => {
+
+    const KEY = 'thumbnail-' + fileName;
+
     return new Promise((res, rej) => {
         S3.putObject({
             Bucket : BUCKET,
-            Key: 'thumbnail-' + fileName,
+            Key: KEY,
             Body: buffer
         }, (err, data) => {
             if (err) {
                 return rej(err);
             }
-            return res(data);
+            return res({
+                bucket: BUCKET,
+                key: KEY            
+            });
         });
 
     });
