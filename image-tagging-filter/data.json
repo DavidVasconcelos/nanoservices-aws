@@ -1,0 +1,22 @@
+{
+  "Records": [
+    {
+      "EventSource": "aws:sns",
+      "EventVersion": "1.0",
+      "EventSubscriptionArn": "arn:aws:sns:us-east-1:316649820111:s3-nanoservices-imagens-put-topic:d649f03c-8e01-4e75-8224-6164b8d40c27",
+      "Sns": {
+        "Type": "Notification",
+        "MessageId": "7ca3d3b0-09f0-5b61-9eef-844848ec0fb8",
+        "TopicArn": "arn:aws:sns:us-east-1:316649820111:s3-nanoservices-imagens-put-topic",
+        "Subject": "Amazon S3 Notification",
+        "Message": "{\"Records\":[{\"eventVersion\":\"2.1\",\"eventSource\":\"aws:s3\",\"awsRegion\":\"us-east-1\",\"eventTime\":\"2020-10-07T22:19:04.450Z\",\"eventName\":\"ObjectCreated:Put\",\"userIdentity\":{\"principalId\":\"AWS:AIDAUTOOMZ7HYLXCAAEGE\"},\"requestParameters\":{\"sourceIPAddress\":\"177.126.11.47\"},\"responseElements\":{\"x-amz-request-id\":\"88D8C4159015AB20\",\"x-amz-id-2\":\"BcUPb34mCWpB1vdx2bJbRIqo95yenCzCkFXeNzOYVfYZsuEXLR9JRSQpxkBXIy1KPgTO6r82iKVJEPTLTRiv2UfQEqk5Rrwl2n/VdWI9sIM=\"},\"s3\":{\"s3SchemaVersion\":\"1.0\",\"configurationId\":\"put-object-notification\",\"bucket\":{\"name\":\"nanoservices-images\",\"ownerIdentity\":{\"principalId\":\"A1A82WE43BJC87\"},\"arn\":\"arn:aws:s3:::nanoservices-images\"},\"object\":{\"key\":\"10717b23-5d2f-4efc-ba4b-ae832c33d15a.jpg\",\"size\":34232,\"eTag\":\"c5455f296d08fdea8e1696920681ee0b\",\"sequencer\":\"005F7E3EDB5B7FEDA2\"}}}]}",
+        "Timestamp": "2020-10-07T22:19:08.410Z",
+        "SignatureVersion": "1",
+        "Signature": "Dl2TKRtDiZha1tUf4HAuYwYkNn0uLOC0JmZgcI7H1qYvpdiGRtI3EkUsCm1F5heNvsj7T8aOcN1KOZc9aypCxfopoItZevJymdzOQmGSnTzDHPGg6iWO6njrhVXEDDTLk7ckmov6OsxKIp+Rnm7GaiXZeXb+w2u9DgU3ebqaSCsZpE+3hR2rZnHF0gpK2UtWQqZzz1/T26xB7hzSSNY6CjfCFcLyhQg2kIEpYmkn4Wpchc3yliQ3xc5l96b9mf/O+p9w/KamKRXw4h2ZdlxFbrciW0H5HAzIrYIglTFkWuSCz9ObSG0ZqvvxzmUs3THACkpi68Y7D9sXwkAAr0k57g==",
+        "SigningCertUrl": "https://sns.us-east-1.amazonaws.com/SimpleNotificationService-a86cb10b4e1f29c941702d737128f7b6.pem",
+        "UnsubscribeUrl": "https://sns.us-east-1.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:us-east-1:316649820111:s3-nanoservices-imagens-put-topic:d649f03c-8e01-4e75-8224-6164b8d40c27",
+        "MessageAttributes": {}
+      }
+    }
+  ]
+}
