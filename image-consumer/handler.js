@@ -13,11 +13,12 @@ module.exports.consumer = async event => {
 
     switch (item.eventType) {
       case 'TAG_EVENT':
+        console.log('Chamou o elastic');
         await elasticsearchService.index({
-          id: item.index,
+          id: item.key,
           tags: item.labels
-        })
-        dbItem.labels = item.labels
+        });
+        dbItem.labels = item.labels;
         break;
       case 'FILTER_EVENT':
         dbItem.blackWhiteFilter = {
