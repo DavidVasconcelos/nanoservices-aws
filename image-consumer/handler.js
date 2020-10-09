@@ -17,7 +17,7 @@ module.exports.consumer = async event => {
           id: item.index,
           tags: item.labels
         })
-        dbItem.labels = item.labels 
+        dbItem.labels = item.labels
         break;
       case 'FILTER_EVENT':
         dbItem.blackWhiteFilter = {
