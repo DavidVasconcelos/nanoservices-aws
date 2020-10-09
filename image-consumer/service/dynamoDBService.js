@@ -12,10 +12,7 @@ const putItem = item => {
   return new Promise((res, rej) => {
     dynamodb.put({
       TableName: TABLE,
-      Item: {
-        id: item.key,
-        bucket: item.bucket
-      }
+      Item: item
     }, (err, data) => {
       if (err) {
         return rej(err);
@@ -40,7 +37,7 @@ const getItem = id => {
         return rej(err);
       }
 
-      return res(data.item);
+      return res(data.Item);
     })
   });
 }

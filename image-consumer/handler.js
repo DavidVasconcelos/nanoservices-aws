@@ -6,7 +6,9 @@ const dynamoDBService = require('./service/dynamoDBService');
 module.exports.consumer = async event => {
 
   for (const record of event.Records) {
+
     const item = JSON.parse(record.body);
+
     const dbItem = await dynamoDBService.getItem(item.key);
 
     switch (item.eventType) {
@@ -27,8 +29,9 @@ module.exports.consumer = async event => {
           bucket: item.bucket,
           key: item.key
         };
-        break;     
+        break;
     }
+
     await dynamoDBService.putItem(dbItem);
 
   }
