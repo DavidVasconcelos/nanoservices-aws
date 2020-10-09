@@ -16,4 +16,4 @@ functions:
         - sg-0b0351526d19be6ea
     events:
       - sqs: arn:aws:sqs:us-east-1:316649820111:post-process-image-queue
-
+    reservedConcurrency: 1
