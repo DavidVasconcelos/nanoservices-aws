@@ -25,7 +25,7 @@ const getObject = (bucket, key) => {
 
 const putObject = (buffer, fileName) => {
 
-    const KEY = 'thumbnail-' + fileName;
+    const KEY = fileName;
 
     return new Promise((res, rej) => {
         S3.putObject({
