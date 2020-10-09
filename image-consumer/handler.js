@@ -26,7 +26,7 @@ module.exports.consumer = async event => {
         };
         break;
       case 'THUMBNAIL_EVENT':
-        dbItem.thumbanail = {
+        dbItem.thumbnail = {
           bucket: item.bucket,
           key: item.key
         };
