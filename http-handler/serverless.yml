@@ -22,3 +22,15 @@ functions:
       - http:
           path: images
           method: post
+  get:
+    handler: handler.get
+    role: arn:aws:iam::316649820111:role/lambda-http-handler-get
+    vpc:
+      subnetIds:
+        - subnet-0c1f8185f15e36162        
+      securityGroupIds:
+        - sg-0b0351526d19be6ea
+    events:
+      - http:
+          path: images
+          method: get
