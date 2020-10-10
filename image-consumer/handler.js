@@ -13,7 +13,6 @@ module.exports.consumer = async event => {
 
     switch (item.eventType) {
       case 'TAG_EVENT':
-        console.log('Chamou o elastic');
         await elasticsearchService.index({
           id: item.key,
           tags: item.labels

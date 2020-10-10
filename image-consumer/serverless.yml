@@ -12,7 +12,7 @@ functions:
       subnetIds:
         - subnet-0c1f8185f15e36162
         - subnet-00e2bb242bf49a2e8
-      securityGroupsIds:
+      securityGroupIds:
         - sg-0b0351526d19be6ea
     events:
       - sqs: arn:aws:sqs:us-east-1:316649820111:post-process-image-queue
